@@ -4,7 +4,7 @@ variable "region" {
 
 variable "vpc_state_config" {
   description = "A config for accessing the vpc state file"
-  type        = "map"
+  type        = map(string)
 }
 
 variable "name" {
@@ -24,3 +24,4 @@ variable "environment" {
   description = "The environment to use for the instance"
   default     = ""
 }
+
