@@ -1,5 +1,5 @@
 provider "aws" {
-  region = "${var.region}"
+  region = var.region
 }
 
 terraform {
@@ -8,7 +8,7 @@ terraform {
 
 data "terraform_remote_state" "vpc" {
   backend = "s3"
-  config  = "${var.vpc_state_config}"
+  config  = var.vpc_state_config
 }
 
 resource "aws_security_group" "default" {
